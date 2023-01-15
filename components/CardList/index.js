@@ -1,7 +1,11 @@
 import Image from "next/image";
 
 import useSWR from "swr";
-import { StyledLink, StyledLink1 } from "../AddPlaceForm/AddPlaceForm.styled";
+import {
+  StyledLink,
+  StyledLink1,
+  StyledLink2,
+} from "../AddPlaceForm/AddPlaceForm.styled";
 // import places from "../../db.json";
 import { StyledHeader, StyledImage, StyledList } from "./CardList.styled";
 
@@ -15,9 +19,8 @@ export default function CardList() {
 
   return (
     <>
-      <StyledLink1 href="/addPage">+ Place</StyledLink1>
-      <hr></hr>
       <StyledList>
+        <StyledLink2 href="/addPage">+ Place</StyledLink2>
         {data.map((place) => {
           return (
             <StyledHeader style={{ position: "relative" }} key={place._id}>

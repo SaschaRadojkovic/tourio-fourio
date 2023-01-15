@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import { StyledHeader, StyledList } from "../CardList/CardList.styled";
-import { FormWrapper, StyledLink2 } from "./AddPlaceForm.styled";
+import { FormWrapper, StyledLink1, StyledLink2 } from "./AddPlaceForm.styled";
 
 export default function AddPlaceForm() {
   const router = useRouter();
