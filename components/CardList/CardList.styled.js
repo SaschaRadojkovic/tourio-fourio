@@ -7,7 +7,6 @@ export const StyledList = styled.ul`
   justify-content: center;
   z-index: 1;
   position: relative;
-
   margin-top: 6em;
 `;
 
