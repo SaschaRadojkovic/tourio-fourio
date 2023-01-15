@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHeading = styled.h1`
+  min-width: 400px;
+  z-index: 100;
   position: fixed;
   width: 100%;
   top: 0;

@@ -1,11 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
-
-import styled from "styled-components";
-const FormWrapper = styled.form`
-  display: grid;
-`;
+import { StyledHeader, StyledList } from "../CardList/CardList.styled";
+import { FormWrapper, StyledLink2 } from "./AddPlaceForm.styled";
 
 export default function AddPlaceForm() {
   const router = useRouter();
@@ -50,26 +47,30 @@ export default function AddPlaceForm() {
 
   return (
     <>
-      <FormWrapper onSubmit={handleAddPlace}>
-        <label htmlFor="name">Name</label>
-        <input id="name" type="text" name="name" />
+      <StyledList>
+        <StyledLink2 href="/">back</StyledLink2>
+        <StyledHeader>
+          <FormWrapper onSubmit={handleAddPlace}>
+            <h2>Add a new Place</h2>
+            <label htmlFor="name">Name</label>
+            <input id="name" type="text" name="name" />
 
-        <label htmlFor="imageURL">Image Url</label>
-        <input id="imageURL" type="text" name="image" />
+            <label htmlFor="imageURL">Image Url</label>
+            <input id="imageURL" type="text" name="image" />
 
-        <label htmlFor="location">Location</label>
-        <input id="location" type="text" name="location" />
+            <label htmlFor="location">Location</label>
+            <input id="location" type="text" name="location" />
 
-        <label htmlFor="mapURL">Map Url</label>
-        <input id="mapURL" type="text" name="mapURL" />
+            <label htmlFor="mapURL">Map Url</label>
+            <input id="mapURL" type="text" name="mapURL" />
 
-        <label htmlFor="description">description</label>
-        <textarea id="description" type="text" name="description" />
+            <label htmlFor="description">description</label>
+            <textarea id="description" type="text" name="description" />
 
-        <button type="submit">save place</button>
-      </FormWrapper>
-
-      <Link href="/">back</Link>
+            <button type="submit">save place</button>
+          </FormWrapper>
+        </StyledHeader>
+      </StyledList>
     </>
   );
 }
