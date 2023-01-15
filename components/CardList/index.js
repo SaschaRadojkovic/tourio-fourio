@@ -20,9 +20,18 @@ export default function CardList() {
       <StyledList>
         {data.map((place) => {
           return (
-            <StyledHeader key={place._id}>
-              <h4>{place.name}</h4>
-              <hr></hr>
+            <StyledHeader style={{ position: "relative" }} key={place._id}>
+              <h4
+                style={{
+                  position: "absolute",
+                  color: "white",
+                  top: 130,
+                  left: 40,
+                }}
+              >
+                {place.name}
+              </h4>
+
               <span>{place.location}</span>
               <StyledImage src={place.image} alt="" width={150} height={150} />
               {/* <p>{place.description}</p>
